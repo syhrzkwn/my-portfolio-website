@@ -1,0 +1,98 @@
+* {
+  font-family: 'Roboto mono', sans-serif;
+}
+
+body {
+  color: #f8f9fa;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  letter-spacing: 2px;
+  /* filter: drop-shadow(0 0 .5em rgb(255, 200, 0)); */
+}
+
+.typewriter {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 3px solid rgb(255, 200, 0); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 2px;
+  animation:
+    typing 2.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 200, 0); }
+}
+
+.navbar-item:hover {
+  transition: .2s;
+  color: rgb(255, 200, 0) !important;
+}
+
+.profile-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+  width: auto;
+  will-change: filter;
+  border: 2px solid rgb(255, 200, 0);
+  border-radius: .5rem;
+  margin-bottom: 2rem;
+}
+.profile-img:hover {
+  transition: .2s;
+  filter: drop-shadow(0 0 1em rgb(255, 200, 0));
+}
+
+.card {
+  background-color: #6610f2;
+  padding: 0 0 5rem 0;
+}
+
+.text {
+  font-family: 'Nabla', cursive;
+}
+
+.text-2 {
+  font-family: 'Silkscreen', sans-serif;
+}
+
+.button {
+  border-radius: .5rem;
+  border: 2px solid rgb(255, 200, 0);
+  color: rgb(255, 200, 0);
+  padding: .5rem 2rem;
+  margin: 0 .5rem;
+  letter-spacing: 2px;
+  font-family: 'Nabla', cursive;
+}
+.button:hover {
+  background-color: rgb(255, 247, 220);
+  color: rgb(255, 200, 0);
+  transition: .2s;
+  filter: drop-shadow(0 0 1em rgb(255, 200, 0));
+}
+
+footer {
+  background-color: #6610f2;
+}
