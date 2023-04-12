@@ -10,10 +10,13 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  letter-spacing: 2px;
-  /* filter: drop-shadow(0 0 .5em rgb(255, 200, 0)); */
+.bg-new {
+  background-color: #6610f2;
 }
+
+.hero {
+  margin-top: 3rem;
+} 
 
 .typewriter {
   margin-left: auto;
@@ -22,7 +25,7 @@ h1 {
 }
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 3px solid rgb(255, 200, 0); /* The typwriter cursor */
+  border-right: 2px solid rgb(255, 200, 0); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 2px;
@@ -43,9 +46,31 @@ h1 {
   50% { border-color: rgb(255, 200, 0); }
 }
 
-.navbar-item:hover {
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #f8f9fa;
+}
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  color: rgb(255, 200, 0);
+  background-color: rgb(255, 200, 0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover {
   transition: .2s;
-  color: rgb(255, 200, 0) !important;
+  color: rgb(255, 200, 0);
+}
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .profile-img {
@@ -64,13 +89,10 @@ h1 {
   filter: drop-shadow(0 0 1em rgb(255, 200, 0));
 }
 
-.card {
-  background-color: #6610f2;
-  padding: 0 0 5rem 0;
-}
-
 .text {
   font-family: 'Nabla', cursive;
+  letter-spacing: 2px;
+  /* filter: drop-shadow(0 0 .5em rgb(255, 200, 0)); */
 }
 
 .text-2 {
@@ -78,6 +100,7 @@ h1 {
 }
 
 .button {
+  background-color: #6610f2;
   border-radius: .5rem;
   border: 2px solid rgb(255, 200, 0);
   color: rgb(255, 200, 0);
@@ -93,6 +116,63 @@ h1 {
   filter: drop-shadow(0 0 1em rgb(255, 200, 0));
 }
 
+.text-bg-primary {
+  background-color: #6610f2 !important;
+  color: rgb(255, 200, 0) !important;
+}
+
+.social-icon {
+  background-color: #6610f2;
+  /* border: 2px solid rgb(255, 200, 0) !important; */
+  border-radius: 50%;
+  margin: 0 1rem;
+  padding: 10px 13px;
+  color: #f8f9fa;
+  font-size: 20px;
+  will-change: filter;
+}
+
+.social-icon:hover {
+  transition: .2s;
+  background-color: #6610f2;
+  filter: drop-shadow(0 0 2em #6610f2);
+}
+
+.card-link {
+  color: #6610f2;
+  text-decoration: underline;
+}
+.card-link:hover {
+  color: #6610f2;
+}
+
 footer {
   background-color: #6610f2;
+}
+
+input:checked {
+  background-color: #6610f2 !important;
+  border: 1.5px solid rgb(255, 200, 0) !important;
+}
+
+/* For small devices */
+@media screen and (max-width: 500px) {
+  .nav-custom {
+    display: none;
+  }
+
+  .hero {
+    margin-top: 0;
+  } 
+}
+
+/* For medium devices */
+@media screen and (max-width: 800px) {
+  .nav-custom {
+    display: none;
+  }
+
+  .hero {
+    margin-top: 0;
+  } 
 }
